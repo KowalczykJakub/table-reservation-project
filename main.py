@@ -3,20 +3,29 @@ from uuid import UUID
 
 from fastapi import FastAPI, HTTPException
 
-from models import Reservation
+import initialize_data
+import mail_sender
+from models import Reservation, Table
 
 app = FastAPI()
 
 reservations: List[Reservation] = []
+allTables: List[Table] = initialize_data.readTablesFromJsonFile()
 
-@app.get("/")
+
+@app.get("/emailTest")
 async def root():
-    return {"message": "Hello World"}
+    return mail_sender.sendEmail('siema.siema@gmail.com', 'Siema', 'Siema, ale to content')
 
 
 @app.get("/reservations")
 async def getReservations():
     return reservations
+
+
+@app.get("/tables")
+async def getTables():
+    return allTables
 
 
 @app.post("/reservations")
@@ -26,10 +35,10 @@ async def addReservation(reservation: Reservation):
 
 
 @app.delete("/reservations/{id}")
-async def deleteReservation(id: UUID):
+async def deleteReservation(id: UUID, code: str):
     for reservation in reservations:
         if reservation.id == id:
             reservations.remove(reservation)
-            return 
+            return
         raise HTTPException(status_code=404, detail=f"Reservation with id: {id} does not exist")
 

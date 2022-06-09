@@ -14,3 +14,21 @@ class Reservation(BaseModel):
     fullName: str
     phone: str
     email: str
+
+
+class Table:
+    number: int
+    min_number_of_seats: int
+    max_number_of_seats: int
+
+    def __init__(self, number: int, min_number_of_seats: int, max_number_of_seats: int) -> None:
+        self.number = number
+        self.min_number_of_seats = min_number_of_seats
+        self.max_number_of_seats = max_number_of_seats
+
+# class Table(BaseModel):
+#     number: int
+#     minNumberOfSeats: int
+#     maxNumberOfSeats: int
+
+
