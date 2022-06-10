@@ -100,34 +100,39 @@
     "maxNumberOfSeats": 3
   },
   {
+    "number": 21,
+    "minNumberOfSeats": 3,
+    "maxNumberOfSeats": 4
+  },
+  {
     "number": 22,
     "minNumberOfSeats": 3,
     "maxNumberOfSeats": 4
   },
   {
     "number": 23,
-    "minNumberOfSeats": 3,
-    "maxNumberOfSeats": 4
-  },
-  {
-    "number": 24,
     "minNumberOfSeats": 2,
     "maxNumberOfSeats": 3
   },
   {
-    "number": 25,
+    "number": 24,
     "minNumberOfSeats": 6,
     "maxNumberOfSeats": 8
   },
   {
-    "number": 26,
+    "number": 25,
     "minNumberOfSeats": 4,
     "maxNumberOfSeats": 6
   },
   {
-    "number": 27,
+    "number": 26,
     "minNumberOfSeats": 3,
     "maxNumberOfSeats": 4
+  },
+  {
+    "number": 27,
+    "minNumberOfSeats": 4,
+    "maxNumberOfSeats": 6
   },
   {
     "number": 28,
@@ -136,8 +141,8 @@
   },
   {
     "number": 29,
-    "minNumberOfSeats": 4,
-    "maxNumberOfSeats": 6
+    "minNumberOfSeats": 3,
+    "maxNumberOfSeats": 4
   },
   {
     "number": 30,
@@ -156,8 +161,8 @@
   },
   {
     "number": 33,
-    "minNumberOfSeats": 3,
-    "maxNumberOfSeats": 4
+    "minNumberOfSeats": 4,
+    "maxNumberOfSeats": 6
   },
   {
     "number": 34,
@@ -166,13 +171,33 @@
   },
   {
     "number": 35,
-    "minNumberOfSeats": 4,
-    "maxNumberOfSeats": 6
+    "minNumberOfSeats": 6,
+    "maxNumberOfSeats": 8
   },
   {
     "number": 36,
-    "minNumberOfSeats": 6,
-    "maxNumberOfSeats": 8
+    "minNumberOfSeats": 2,
+    "maxNumberOfSeats": 2
+  },
+  {
+    "number": 37,
+    "minNumberOfSeats": 2,
+    "maxNumberOfSeats": 2
+  },
+  {
+    "number": 38,
+    "minNumberOfSeats": 2,
+    "maxNumberOfSeats": 2
+  },
+  {
+    "number": 39,
+    "minNumberOfSeats": 2,
+    "maxNumberOfSeats": 2
+  },
+  {
+    "number": 40,
+    "minNumberOfSeats": 2,
+    "maxNumberOfSeats": 2
   },
   {
     "number": 41,
@@ -206,36 +231,11 @@
   },
   {
     "number": 47,
-    "minNumberOfSeats": 2,
-    "maxNumberOfSeats": 2
-  },
-  {
-    "number": 48,
-    "minNumberOfSeats": 2,
-    "maxNumberOfSeats": 2
-  },
-  {
-    "number": 49,
-    "minNumberOfSeats": 2,
-    "maxNumberOfSeats": 2
-  },
-  {
-    "number": 50,
-    "minNumberOfSeats": 2,
-    "maxNumberOfSeats": 2
-  },
-  {
-    "number": 51,
-    "minNumberOfSeats": 2,
-    "maxNumberOfSeats": 2
-  },
-  {
-    "number": 52,
     "minNumberOfSeats": 1,
     "maxNumberOfSeats": 2
   },
   {
-    "number": 53,
+    "number": 48,
     "minNumberOfSeats": 1,
     "maxNumberOfSeats": 2
   }
