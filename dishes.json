@@ -1,0 +1,152 @@
+[
+  {
+    "name": "90's Burger",
+    "description": "z wołowiną, serem, bekonem, czerwoną kapustą, keczupem, majonezem, musztardą i prażoną cebulką",
+    "price": 31.00,
+    "type": "Popularne dania"
+  },
+  {
+    "name": "Drwal Burger [zestaw]",
+    "description": "wołowina 2x150g (w tej pozycji możliwość wysmażenia jedynie 'dobrze wysmażony'), sałata loco bianco, pomidor, czerwona cebula, ogórek konserwowy, bekon, ser, cheddar, panierowana mozzarella, prażona cebula, majonez, sos BBQ",
+    "price": 44.00,
+    "type": "Popularne dania"
+  },
+  {
+    "name": "Buffalo Wings",
+    "description": "oryginalne amerykańskie skrzydełka podawane z sosem blue cheese",
+    "price": 29.00,
+    "type": "Popularne dania"
+  },
+  {
+    "name": "Cheeseburger",
+    "description": "z wołowiną, podwójnym serem i musztardą",
+    "price": 28.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Wild Texas Burger",
+    "description": "z wołowiną, podwójnym serem, podwójnym bekonem i sosem BBQ",
+    "price": 30.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Little Italy Burger",
+    "description": "z wołowiną, mozarellą, mixem sałat, suszonymi pomidorami, bazyliowym pesto i balsamico",
+    "price": 32.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Titan Burger",
+    "description": "z wołowiną, podwójną mozarellą, jalapeno i sosem tzatziki",
+    "price": 32.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Hot Sweet Hot Burger",
+    "description": "z wołowiną, jalapeno, peperoni, podwójnym ananasem, cheddarem i sosem sweet chilli",
+    "price": 33.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "90's Burger",
+    "description": "z wołowiną, serem, bekonem, czerwoną kapustą, keczupem, majonezem, musztardą i prażoną cebulką",
+    "price": 31.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Big Dalton Burger",
+    "description": "z 2x150g wołowiny (w tej pozycji możliwość wysmażenia jedynie 'dobrze wysmażony'), sosem BBQ, podwójnym bekonem, podwójnym serem",
+    "price": 36.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Surf N' Turf Burger",
+    "description": "z wołowiną, 3 krewetkami Panko, mozarellą, majonezem limonkowym i guacamole",
+    "price": 38.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Vege Burger",
+    "description": "z mixem sałat, panierowanym serem camembert, grillowaną papryką, guacamole i prażonymi pestkami dyni",
+    "price": 32.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Teriyaki Chicken Burger",
+    "description": "grillowana pierś 200g w marynacie teriyaki, grillowany ananas, sałata lodowa, pomidor, creamy wasabi sauce, marynowany imbir, korean bbq, czarny sezam",
+    "price": 31.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Bacon Chipotle Cheeseburger",
+    "description": "wołowina 200g, sałata loco bianco, pomidor, czerwona cebula, ogórek konserwowy, bekon, podwójny cheddar, prażona cebula, majonez chipotle",
+    "price": 31.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Extreme Burger",
+    "description": "wołowina z jalapeno 200g, sałata loco bianco, pomidor, czerwona cebula, ogórek konserwowy, podwójny cheddar, grillowane chilli, nachosy, mix sałat, sos ekstremalny, guacamole, salsa",
+    "price": 32.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Drwal Burger",
+    "description": "wołowina 2x150g (w tej pozycji możliwość wysmażenia jedynie 'dobrze wysmażony'), sałata loco bianco, pomidor, czerwona cebula, ogórek konserwowy, bekon, ser, cheddar, panierowana mozzarella, prażona cebula, majonez, sos BBQ",
+    "price": 37.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "American Burger",
+    "description": "100% wołowej klasyki z sosem BBQ",
+    "price": 27.00,
+    "type": "Burgery"
+  },
+  {
+    "name": "Buffalo Wings",
+    "description": "oryginalne amerykańskie skrzydełka podawane z sosem blue cheese",
+    "price": 29.00,
+    "type": "Skrzydełka"
+  },
+  {
+    "name": "Extreme Wings",
+    "description": "ekstremalnie pikantne skrzydełka podawane z sosem tzatzyki",
+    "price": 30.00,
+    "type": "Skrzydełka"
+  },
+  {
+    "name": "Red Rock BBQ Wings",
+    "description": "skrzydełka w naszym oryginalnym sosie BBQ",
+    "price": 29.00,
+    "type": "Skrzydełka"
+  },
+  {
+    "name": "Sweet Chilli Wings",
+    "description": "skrzydełka w sosie sweet chilli z jalapeno",
+    "price": 29.00,
+    "type": "Skrzydełka"
+  },
+  {
+    "name": "Korean Wings",
+    "description": "skrzydełka w koreańskim sosie BBQ, posypane czarnym sezamem",
+    "price": 29.00,
+    "type": "Skrzydełka"
+  },
+  {
+    "name": "Vege Buffalo Wings",
+    "description": "skrzydełka z kalafiora w panierce panko podawane z sosem blue cheese",
+    "price": 24.00,
+    "type": "Skrzydełka"
+  },
+  {
+    "name": "Buffalo Shrimps",
+    "description": "pikantne krewetki Buffalo (10szt) w panierce Panko podawane z sosem ranch",
+    "price": 41.00,
+    "type": "Krewetki"
+  },
+  {
+    "name": "Extreme Shrimps",
+    "description": "krewetki Buffalo w wersji ekstremalnie pikantnej",
+    "price": 42.00,
+    "type": "Krewetki"
+  }
+]

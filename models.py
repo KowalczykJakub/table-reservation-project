@@ -1,15 +1,16 @@
+import uuid
 from datetime import datetime, timedelta
 from typing import Optional
-from uuid import UUID, uuid4
+from uuid import UUID
 import re
 
-from pydantic import BaseModel, validator, root_validator
+from pydantic import BaseModel, validator, root_validator, Field
 
 import main
 
 
 class Reservation(BaseModel):
-    id: Optional[UUID] = uuid4()
+    id: Optional[UUID] = Field(default_factory=uuid.uuid4)
     date: str
     duration: int
     seatNumber: int
@@ -97,6 +98,19 @@ class Table:
         self.max_number_of_seats = max_number_of_seats
 
 
+class Dish:
+    name: str
+    description: str
+    price: float
+    type: str
+
+    def __init__(self, name: str, description: str, price: float, type: str) -> None:
+        self.name = name
+        self.description = description
+        self.price = price
+        self.type = type
+
+
 class CancellationCode(BaseModel):
     verificationCode: str
 
@@ -108,11 +122,3 @@ class CancellationRequest:
     def __init__(self, id: UUID, verificationCode: str) -> None:
         self.id = id
         self.verificationCode = verificationCode
-
-    def __eq__(self, other):
-        if isinstance(other, CancellationRequest):
-            return self.id == other.id and self.verificationCode == other.verificationCode
-        return False
-
-    def __hash__(self) -> int:
-        return super().__hash__()

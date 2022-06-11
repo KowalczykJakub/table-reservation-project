@@ -1,30 +1,44 @@
 from datetime import datetime, timedelta
-from typing import List, Set
+from typing import List
 from uuid import UUID
 import random
 import math
 
 from fastapi import FastAPI, HTTPException
+from starlette.middleware.cors import CORSMiddleware
 
 import initialize_data
 import mail_sender
-from models import Reservation, Table, CancellationRequest, CancellationCode
+from models import Reservation, Table, CancellationRequest, CancellationCode, Dish
 
 app = FastAPI()
 
+origins = ["http://localhost:4200",
+           "localhost:4200",
+           "https://localhost:4200"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 reservations: List[Reservation] = []
 allTables: List[Table] = initialize_data.readTablesFromJsonFile()
-cancellationRequests: Set[CancellationRequest] = set()
-
-
-@app.get("/emailTest")
-async def root():
-    return mail_sender.sendEmail('siema.siema@gmail.com', 'Siema', 'Siema, ale to content')
+allDishes: List[Dish] = initialize_data.readDishesFromJsonFile()
+cancellationRequests: List[CancellationRequest] = []
 
 
 @app.get("/reservations")
 async def getReservations():
     return reservations
+
+
+@app.get("/dishes")
+async def getReservations():
+    return allDishes
 
 
 @app.get("/tables")
@@ -56,19 +70,25 @@ async def cancellationOfReservationRequest(id: UUID):
                 raise HTTPException(status_code=403, detail="It's too late to cancel your reservation")
             code = generateCode()
             mail_sender.sendVerificationCode(reservation.email, code)
-            cancellationRequests.add(CancellationRequest(id, code))
+            # Tutaj pętla z usunięciem wszystkich requestów z tym samym id
+            for request in cancellationRequests:
+                if request.id == id:
+                    cancellationRequests.remove(request)
+            cancellationRequests.append(CancellationRequest(id, code))
             return "Verification code has been sent!"
     raise HTTPException(status_code=404, detail=f"Reservation with id: {id} does not exist")
 
 
-@app.delete("/reservations/{id}")
-async def deleteReservation(id: UUID, code: CancellationCode):
+@app.delete("/reservations/{id}/{code}")
+async def deleteReservation(id: UUID, code: str):
     for request in cancellationRequests:
         if request.id == id:
-            if request.verificationCode == code.verificationCode:
+            if request.verificationCode == code:
                 for reservation in reservations:
                     if reservation.id == id:
                         reservations.remove(reservation)
+                        mail_sender.sendEmail(reservation.email, "Your reservation has been cancelled",
+                                              f"Reservation with id {reservation.id} has been cancelled")
                 cancellationRequests.remove(request)
             else:
                 raise HTTPException(status_code=400, detail="Verification code is not correct!")
