@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+
+    <img src="../../assets/jakobo.jpg" width="150" height="150" id="photo"/>
+
+    <a routerLink="" routerLinkActive="active" class="nav-link">Jacobo's plate</a>
+    <p id="line"> | </p>
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a routerLink="add-reservation" routerLinkActive="active" class="nav-link">Add Reservation</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="send-cancellation-request" routerLinkActive="active" class="nav-link">Cancel Reservation</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="filter-tables" routerLinkActive="active" class="nav-link">Filter Tables</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

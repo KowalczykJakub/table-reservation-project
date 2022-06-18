@@ -1,0 +1,43 @@
+<div id="menu-sig">
+    <p>NASZE MENU</p>
+</div>
+
+<p class="title"><b><u>Popularne dania</u></b></p>
+<div *ngFor="let dish of dishes">
+    <div *ngIf="dish.type === 'Popularne dania'">
+        <p><b>{{ dish.name }}</b></p>
+        <p>{{ dish.description }}</p>
+        <p>{{ dish.price | currency }}</p>
+        <p></p>
+    </div>
+</div>
+
+<p class="title"><b><u>Burgery</u></b></p>
+<div *ngFor="let dish of dishes">
+    <div *ngIf="dish.type === 'Burgery'">
+        <p><b>{{ dish.name }}</b></p>
+        <p>{{ dish.description }}</p>
+        <p>{{ dish.price | currency }}</p>
+        <p></p>
+    </div>
+</div>
+
+<p class="title"><b><u>Skrzydełka</u></b></p>
+<div *ngFor="let dish of dishes">
+    <div *ngIf="dish.type === 'Skrzydełka'">
+        <p><b>{{ dish.name }}</b></p>
+        <p>{{ dish.description }}</p>
+        <p>{{ dish.price | currency }}</p>
+        <p></p>
+    </div>
+</div>
+
+<p class="title"><b><u>Krewetki</u></b></p>
+<div *ngFor="let dish of dishes">
+    <div *ngIf="dish.type === 'Krewetki'">
+        <p><b>{{ dish.name }}</b></p>
+        <p>{{ dish.description }}</p>
+        <p>{{ dish.price | currency }}</p>
+        <p></p>
+    </div>
+</div>

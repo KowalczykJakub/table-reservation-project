@@ -1,0 +1,23 @@
+#photo {
+    margin-left: 10px;
+    border: white;
+}
+
+a {
+    font-size: 40px;
+    color: white;
+    margin-left: 10px;
+}
+
+#line {
+    font-size: 50px;
+    color: white;
+    margin-left: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Bell MT";
+    margin-top: 20px;
+}

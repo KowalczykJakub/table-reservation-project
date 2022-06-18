@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 
 import initialize_data
 import mail_sender
-from models import Reservation, Table, CancellationRequest, CancellationCode, Dish
+from models import Reservation, Table, CancellationRequest, Dish, TableFilterModel
 
 app = FastAPI()
 
@@ -27,6 +27,7 @@ app.add_middleware(
 
 reservations: List[Reservation] = []
 allTables: List[Table] = initialize_data.readTablesFromJsonFile()
+filteredTables: List[Table] = []
 allDishes: List[Dish] = initialize_data.readDishesFromJsonFile()
 cancellationRequests: List[CancellationRequest] = []
 
@@ -43,7 +44,32 @@ async def getReservations():
 
 @app.get("/tables")
 async def getTables():
-    return allTables
+    return filteredTables
+
+
+@app.post("/tables")
+async def filterTables(tableFilterModel: TableFilterModel):
+    filteredList = []
+    for table in allTables:
+        if (table.minNumberOfSeats <= tableFilterModel.numberOfSeats
+            and table.maxNumberOfSeats >= tableFilterModel.numberOfSeats):
+            filteredList.append(table)
+    dateOfStart = datetime.strptime(tableFilterModel.date, '%Y/%m/%d %H:%M:%S')
+    dateOfFinish = dateOfStart + timedelta(hours=tableFilterModel.duration)
+
+    for reservation in reservations:
+
+        start = datetime.strptime(reservation.date, '%Y/%m/%d %H:%M:%S')
+        finish = start + timedelta(hours=reservation.duration)
+
+        if not ((dateOfFinish <= start) or (dateOfStart >= finish)):
+            for table in filteredList:
+                if table.number == reservation.seatNumber:
+                    filteredList.remove(table)
+    global filteredTables
+    filteredTables = filteredList
+
+    return filteredList
 
 
 @app.post("/reservations")

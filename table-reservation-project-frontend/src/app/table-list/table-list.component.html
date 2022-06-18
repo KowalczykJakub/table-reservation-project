@@ -1,0 +1,8 @@
+<p align="center" class="title">WOLNE STOLIKI</p>
+<p align="center" class="title">W PODANYM TERMINIE</p>
+<div *ngFor="let table of tables" align="center">
+    <p><b>= = = = = {{ table.number }} = = = = =</b></p>
+    <p>Maximum number of seats: {{ table.minNumberOfSeats }}</p>
+    <p>Minimum number of seats: {{ table.maxNumberOfSeats }}</p>
+    <p></p>
+</div>
